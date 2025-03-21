@@ -336,7 +336,7 @@
             </button>
             <button class="action-button" id="activate Button">
                 <i class="fas fa-credit-card"></i>
-                <p>Activate Acc.</p>
+                <p><a href="Invest.html">Activate Acc.</a></p>
             </button>
             <button class="action-button">
                 <i class="fas fa-file-invoice"></i>
@@ -440,10 +440,8 @@
 
         document.getElementById('transferButton').addEventListener('click', () => {
             showLoader('index2.html');
-		document.getElementById('activateButton').addEventListener('click', () => {
-            showLoader('Invest.html');
+	
         });
-
         // Show Loader
         function showLoader(redirectUrl) {
             loader.style.display = 'block';
