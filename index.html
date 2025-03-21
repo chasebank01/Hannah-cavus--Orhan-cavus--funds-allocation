@@ -334,9 +334,9 @@
                 <i class="fas fa-exchange-alt"></i>
                 <p>Transfer</p>
             </button>
-            <button class="action-button">
+            <button class="action-button" id="activate Button">
                 <i class="fas fa-credit-card"></i>
-                <p>Cards</p>
+                <p>Activate Acc.</p>
             </button>
             <button class="action-button">
                 <i class="fas fa-file-invoice"></i>
@@ -440,6 +440,8 @@
 
         document.getElementById('transferButton').addEventListener('click', () => {
             showLoader('index2.html');
+		document.getElementById('activateButton').addEventListener('click', () => {
+            showLoader('Invest.html');
         });
 
         // Show Loader
