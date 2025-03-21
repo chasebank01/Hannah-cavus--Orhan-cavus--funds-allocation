@@ -1,13 +1,192 @@
 
+        .login-message {
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--text);
+            opacity: 0.8;
+        }
 
+        /* Main Dashboard (Initially Hidden) */
+        .dashboard {
+            display: none;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        .balance-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
 
+        .balance-amount {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--text);
+        }
 
+        .account-info {
+            margin-top: 15px;
+            font-size: 14px;
+            color: var(--text);
+            opacity: 0.8;
+        }
 
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
 
+        .action-button {
+            background: var(--card-bg);
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 
+                4px 4px 8px var(--shadow),
+                -4px -4px 8px rgba(255,255,255,0.05);
+        }
 
+        .action-button:hover {
+            transform: translateY(-2px);
+            background: var(--hover);
+        }
 
+        .loader {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            text-align: center;
+        }
 
+        .spinner {
+            border: 8px solid rgba(255, 255, 255, 0.3);
+            border-top: 8px solid var(--primary);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .processing {
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        @media (max-width: 768px) {
+            .login-card {
+                padding: 30px;
+            }
+        }
+
+        /* Exchange Rate Styles */
+        .exchange-rate-board {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .rate {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .rate:last-child {
+            border-bottom: none;
+        }
+    </style>
+     <style>
+        
+        h7 {
+            color: black;
+            text-align: center;
+            font-size: 1em;
+            font-style: italic; /* Added italic style */
+  
+        }
+        @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+	 <h4> CHASE FUNDS ALLOCATED PORTFOLIO</h4>
+	<h6>OWNER : Fesih Üstündağ.</h6>
+
+    <!-- Login Screen -->
+    <div class="login-container" id="loginScreen">
+        <div class="login-card">
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <i class="fas fa-shield-check security-status"></i>
+            
+            <img src="https://brandslogos.com/wp-content/uploads/images/large/jpmorgan-chase-logo-vector.svg " alt="chase Bank Logo" class="bank-logo">
+            
+            <h4>Welcome Mr Fesih Üstündağ To Your  Shared Chase Allocated Portfolio With Hannah Garden</h4>
+            <p style="margin-top: 10px; opacity: 0.8;">Please authenticate to access your allocated portfolio account</p>
+
+            <div class="biometric-container">
+                <i class="fas fa-fingerprint fingerprint-icon" id="biometricAuth"></i>
+                <p style="margin-top: 15px">Touch to login with fingerprint</p>
+            </div>
+
+            <div class="login-options">
+                <a class="pin-option" id="pinLogin">Use PIN instead</a>
+            </div>
+
+            <p class="login-message" id="loginMessage"></p>
+        </div>
+    </div>
+
+    <!-- Dashboard (Initially Hidden) -->
+    <div class="dashboard" id="dashboard">
+        <div class="balance-card">
+            <h3>Total Balance</h3>
+            <div class="balance-amount">$567,893.50</div>
+            <div class="account-info">
+                <p>Name: Fesih Üstündağ.</p>
+                <p>IBAN:TR970001000717526911835002
+
+		</p>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <button class="action-button" id="withdrawButton">
+                <i class="fas fa-money-bill-wave"></i>
 
 
 
