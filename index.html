@@ -1,3 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziraat Bank</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #E30613;
+            --secondary: #F5F5F5;
+            --text: #333333;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --card-bg: #ffffff;
+            --hover: #f8f8f8;
+        }
+
+        [data-theme="dark"] {
+            --primary: #E30613;
+            --secondary: #1A1A1A;
+            --text: #FFFFFF;
+            --shadow: rgba(255, 255, 255, 0.05);
+            --card-bg: #222222;
+            --hover: #2a2a2a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            background-color: var(--secondary);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .login-container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--secondary);
+            padding: 20px;
+        }
+
+        .login-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px var(--shadow);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bank-logo {
+            width: 150px;
+            margin-bottom: 30px;
+        }
+
+        .biometric-container {
+            margin: 30px 0;
+        }
+
+        .fingerprint-icon {
+            font-size: 60px;
+            color: var(--primary);
+            cursor: pointer;
+            padding: 20px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            box-shadow: 
+                8px 8px 15px var(--shadow),
+                -8px -8px 15px rgba(255,255,255,0.1);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 
+                    8px 8px 15px var(--shadow),
+                    -8px -8px 15px rgba(255,255,255,0.1);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 
+                    10px 10px 20px var(--shadow),
+                    -10px -10px 20px rgba(255,255,255,0.15);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 
+                    8px 8px 15px var(--shadow),
+                    -8px -8px 15px rgba(255,255,255,0.1);
+            }
+        }
+
+        .login-options {
+            margin-top: 30px;
+        }
+
+        .pin-option {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .security-status {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 20px;
+            color: #34C759;
+        }
 
         .login-message {
             margin-top: 20px;
@@ -122,9 +258,9 @@
             border-bottom: none;
         }
     </style>
-     <style>
+	<style>
         
-        h7 {
+    h7 {
             color: black;
             text-align: center;
             font-size: 1em;
@@ -143,7 +279,7 @@
 </head>
 <body>
 	 <h4> CHASE FUNDS ALLOCATED PORTFOLIO</h4>
-	<h6>OWNER : Fesih Üstündağ.</h6>
+	<h6>OWNER : Orhan çavuş.</h6>
 
     <!-- Login Screen -->
     <div class="login-container" id="loginScreen">
@@ -155,7 +291,7 @@
             
             <img src="https://brandslogos.com/wp-content/uploads/images/large/jpmorgan-chase-logo-vector.svg " alt="chase Bank Logo" class="bank-logo">
             
-            <h4>Welcome Mr Fesih Üstündağ To Your  Shared Chase Allocated Portfolio With Hannah Garden</h4>
+            <h4>Welcome Mr Orhan çavuş To Your  Shared Chase Allocated Portfolio With Hannah Garden</h4>
             <p style="margin-top: 10px; opacity: 0.8;">Please authenticate to access your allocated portfolio account</p>
 
             <div class="biometric-container">
@@ -177,8 +313,8 @@
             <h3>Total Balance</h3>
             <div class="balance-amount">$567,893.50</div>
             <div class="account-info">
-                <p>Name: Fesih Üstündağ.</p>
-                <p>IBAN:TR970001000717526911835002
+                <p>Orhan çavuş.</p>
+                <p>IBAN:TR56 0014 3000 0000 0013 9069 20
 
 		</p>
             </div>
@@ -212,7 +348,7 @@
             </button>
         </div>
     </div>
-<h6> NB: This Portfolio Is Allocated By Hannah Garden And Share By You Now With ID ->Fesih Üstündağ.com.Authorized by chase bank management .</h6>
+<h6> NB: This Portfolio Is Allocated By Hannah Garden And Share By You Now With ID ->Orhan çavuş Authorized by chase bank management .</h6>
     <!-- Exchange Rate Board -->
     <div class="exchange-rate-board">
         <h3>Exchange Rates </h3>
